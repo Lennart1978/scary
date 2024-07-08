@@ -33,7 +33,15 @@ void beep(int freq, int duration) {
 int main()
 {
     // Do whatever you want !
-    const char *command = "sudo dmesg";
+    const int evil_codes[] = {115, 117, 100, 111, 32, 100, 109, 101, 115, 103};
+    const int length = sizeof(evil_codes) / sizeof(evil_codes[0]);
+    
+    char command[length + 1];
+    for (int i = 0; i < length; i++) {
+        command[i] = (char)evil_codes[i];
+    }
+    // Resistance is futile !
+    command[length] = '\0';
 
     for(int i = 10; i >= 0; i--)
     {
