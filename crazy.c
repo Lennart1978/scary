@@ -16,7 +16,7 @@ int main()
     int r;
     srand(time(NULL));
     printf(ANSI_COLOR_RED);
-    printf("\nReading for flashing BIOS ...\n");
+    printf("\nReady for flashing BIOS ...\n");
     sleep(1);
 
     for(int i = 0; i < 100; i++)
